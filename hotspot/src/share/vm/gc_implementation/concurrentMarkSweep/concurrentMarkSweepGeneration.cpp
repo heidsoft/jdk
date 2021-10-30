@@ -22,6 +22,7 @@
  *
  */
 
+#include <genOopClosures.hpp>
 #include "precompiled.hpp"
 #include "classfile/classLoaderData.hpp"
 #include "classfile/symbolTable.hpp"
@@ -61,6 +62,8 @@
 #include "runtime/vmThread.hpp"
 #include "services/memoryService.hpp"
 #include "services/runtimeService.hpp"
+#include "cmsAdaptiveSizePolicy.hpp"
+#include "concurrentMarkSweepGeneration.hpp"
 
 // statics
 CMSCollector* ConcurrentMarkSweepGeneration::_collector = NULL;

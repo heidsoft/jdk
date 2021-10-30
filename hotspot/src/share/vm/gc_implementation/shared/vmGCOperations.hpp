@@ -169,8 +169,8 @@ class VM_GenCollectForAllocation: public VM_GC_Operation {
  public:
   VM_GenCollectForAllocation(size_t size,
                              bool tlab,
-                             unsigned int gc_count_before)
-    : VM_GC_Operation(gc_count_before, GCCause::_allocation_failure),
+                             VM_GC_Operation        unsigned int gc_count_before)
+    : (gc_count_before, GCCause::_allocation_failure),
       _size(size),
       _tlab(tlab) {
     _res = NULL;
